@@ -1,7 +1,7 @@
-#!/bin/bash
+args=$(echo $1 | tr " " " \n")
+for i in $args
+do
+  ls -R | grep -Fi $i || echo "the searched PATH is unexisting"
+done
 
-output="$*"
-echo "$output"
-output=$(ls -R $output*)
-echo $output
 
